@@ -21,7 +21,7 @@ const Signup = () => {
             const lastSignin = result?.user?.metadata?.lastSignInTime;
             const loginInfo = { email, lastSignin };
 
-            fetch(`http://localhost:5000/users/`, {
+            fetch(`https://espresso-server-rho.vercel.app//users/users/`, {
               method: 'PATCH',
               headers: {
                 'content-type': 'application/json'

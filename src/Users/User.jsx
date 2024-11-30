@@ -5,12 +5,13 @@ import { useLoaderData } from "react-router-dom";
 const User = () => {
     const loadedUsers = useLoaderData();
     const [users, setUsers] = useState(loadedUsers);
+    
     console.log(loadedUsers);
 
     const handleDelete = (id) => {
         console.log(id)
 
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://espresso-server-rho.vercel.app/users/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -40,11 +41,6 @@ const User = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                  </tr> */}
                   {
                     users.map((user,index) => (
                         <tr key={user._id}>

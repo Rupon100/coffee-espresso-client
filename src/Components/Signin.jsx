@@ -19,7 +19,7 @@ const Signin = () => {
         const creationTime = result?.user?.metadata?.creationTime;
 
         const user = { name, email, creationTime };
-        fetch('http://localhost:5000/users', {
+        fetch('https://espresso-server-2oa9e7rru-rupon100s-projects.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

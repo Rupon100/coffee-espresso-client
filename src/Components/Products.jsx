@@ -9,11 +9,11 @@ const Products = () => {
 
     // const [coffees, setCoffees] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/coffee')
+        fetch('https://espresso-server-rho.vercel.app/coffee')
         .then(res => res.json())
         .then(data => {
             setCoffees(data);
-            //console.log(data);
+            console.log(data);
         })
     } ,[])
 
